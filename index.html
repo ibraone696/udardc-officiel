@@ -4,156 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UDARD.C - Union des Diasporas Africaines</title>
-    <style>
-        /* --- RESET ET BASE --- */
-        :root {
-            --primary: #e67e22; /* Orange Ocre - Dynamisme/Afrique */
-            --secondary: #2c3e50; /* Bleu Nuit - Institutionnel/Europe */
-            --light: #ecf0f1;
-            --white: #ffffff;
-            --dark: #333333;
-            --radius: 8px;
-            --shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { line-height: 1.6; color: var(--dark); background-color: #f9f9f9; }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-
-        /* --- HEADER --- */
-        header {
-            background: var(--white);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--secondary);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo span { color: var(--primary); }
-        
-        nav ul { display: flex; gap: 20px; }
-        nav a:hover { color: var(--primary); }
-        .btn-cta {
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.5rem 1.2rem;
-            border-radius: var(--radius);
-            font-weight: bold;
-        }
-        .btn-cta:hover { background: #d35400; }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Image placeholder générique */
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 100px 5%;
-            text-align: center;
-        }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem auto; }
-
-        /* --- SECTIONS GENERIQUES --- */
-        section { padding: 60px 5%; }
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--secondary);
-        }
-        .section-title h2 { font-size: 2rem; position: relative; display: inline-block; }
-        .section-title h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: var(--primary);
-            margin: 10px auto 0;
-        }
-
-        /* --- ABOUT --- */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        .about-content { background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); }
-        
-        /* --- VALEURS (GRID) --- */
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .value-card {
-            background: var(--white);
-            padding: 20px;
-            border-radius: var(--radius);
-            text-align: center;
-            border-top: 4px solid var(--primary);
-            box-shadow: var(--shadow);
-        }
-        .value-card h3 { color: var(--secondary); margin-bottom: 10px; }
-
-        /* --- MISSIONS --- */
-        .missions { background: var(--secondary); color: var(--white); }
-        .missions .section-title h2 { color: var(--white); }
-        .mission-card {
-            background: rgba(255,255,255,0.1);
-            margin-bottom: 15px;
-            padding: 20px;
-            border-radius: var(--radius);
-            border-left: 4px solid var(--primary);
-        }
-        .mission-card h3 { color: var(--primary); margin-bottom: 5px; }
-
-        /* --- ADHESION (PRICING) --- */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        .price-card {
-            background: var(--white);
-            padding: 30px;
-            text-align: center;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            transition: transform 0.3s;
-        }
-        .price-card:hover { transform: translateY(-5px); }
-        .price { font-size: 2.5rem; color: var(--primary); font-weight: bold; margin: 20px 0; }
-        .price span { font-size: 1rem; color: #777; }
-        
-        /* --- FOOTER --- */
-        footer {
-            background: var(--dark);
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* --- MOBILE --- */
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; }
-            nav { display: none; } /* Simplification pour l'exemple */
-            .header-mobile { display: block; }
-        }
-    </style>
+    <meta name="description" content="L'Union des Diasporas Africaines (UDARD.C) est une association qui promeut la diversité culturelle, renforce les liens entre la diaspora et l'Europe, et soutient les jeunes et les femmes.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -162,7 +14,7 @@
             <img src="Logo.png" alt="Logo UDARDC" style="width: 40px; height: 40px; border-radius: 50%;">
             UDARDC
         </div>
-        <nav>
+        <nav id="main-nav">
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#valeurs">Nos Valeurs</a></li>
@@ -170,6 +22,11 @@
                 <li><a href="#adhesion" class="btn-cta">Adhérer</a></li>
             </ul>
         </nav>
+        <button class="hamburger-menu" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <section id="accueil" class="hero">
@@ -297,6 +154,16 @@
         <br>
         <p>&copy; 2024 UDARD.C - Tous droits réservés.</p>
     </footer>
+
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const mainNav = document.getElementById('main-nav');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mainNav.classList.toggle('nav-open');
+            hamburgerMenu.classList.toggle('is-active');
+        });
+    </script>
 
 </body>
 </html>
